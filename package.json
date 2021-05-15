@@ -1,0 +1,33 @@
+{
+  "name": "vknba",
+  "version": "0.0.0",
+  "description": "A Discord Bot",
+  "main": "dist/main.js",
+  "repository": "git@github.com:qrmf/vknba.git",
+  "author": "Alex McDonald (qrmf) <qrmf.dev@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "bg:format": "while true;do prettier -w src&&sleep 900;done",
+    "build": "tsc",
+    "format": "prettier -w src",
+    "start": "node dist/main.js",
+    "test": "concurrently 'tsc -w' 'nodemon'"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.5.0",
+    "axios": "^0.21.1",
+    "bufferutil": "^4.0.3",
+    "discord.js": "^12.5.3",
+    "sodium": "^3.0.2",
+    "utf-8-validate": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "@types/ws": "^7.4.4",
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  }
+}
