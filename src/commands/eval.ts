@@ -19,10 +19,7 @@ function executeCommand(
     return;
   }
 
-  const evalString: string = message.content
-    .split(' ')
-    .splice(1)
-    .join(' ');
+  const evalString: string = message.content.split(' ').splice(1).join(' ');
 
   try {
     log('DEVELOPMENT', 'Command::Eval', `Evaluating string: ${evalString}`);

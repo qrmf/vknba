@@ -8,7 +8,7 @@ function executeCommand(
   message: Message,
 ): void {
   const timestamp: number = Date.now();
-  message.channel.send('🏓 Ping!').then(msg => {
+  message.channel.send('🏓 Ping!').then((msg) => {
     msg.edit(`🏓 Pong!\n${msg.createdAt.valueOf() - timestamp}ms of Latency`);
   });
   message.delete();
