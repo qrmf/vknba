@@ -15,6 +15,7 @@ export type CommandStructure = {
 
 export type ConfigObject = {
   commandPrefix: string;
+  developerIDs: Array<string>;
   discord: {
     clientID: string;
     clientSecret: string;
