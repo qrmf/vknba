@@ -7,11 +7,11 @@ function executeCommand(
   config: ConfigObject,
   message: Message,
 ): void {
-  // const timestamp: Date = new Date();
-
-  // console.info(message.createdAt);
-
-  message.channel.send('Pong!');
+  const timestamp: number = Date.now();
+  message.channel.send('🏓 Ping!').then(msg => {
+    msg.edit(`🏓 Pong!\n${msg.createdAt.valueOf() - timestamp}ms of Latency`);
+  });
+  message.delete();
 }
 
 export const commandInformation: CommandStructure = {
